@@ -45,7 +45,7 @@ with left_col:
     st.markdown("""
     ---
 
-    ### 🧾 Οι 55 μηνύσεις: Τα καλύτερα (και τα πιο βρώμικα, γιατί dark humor)
+    ### 🧾 Οι 55 μηνύσεις: Τα καλύτερα (και τα πιο βρώμικα)
 
     - **Αρχίδια στο κολατσιό:**  
       Άνοιγες το lunch box και... έκπληξη! Ο Α.Κ. έβαζε τα **αρχίδια του** στο σάντουιτς συναδέλφου που μισούσε.  
@@ -282,6 +282,7 @@ with right_col:
 
 
 #streamlit run c:/Users/Owner/OneDrive/Documents/python1/.venv/portokali_satira.py
+
 
 
 
