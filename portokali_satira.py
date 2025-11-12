@@ -35,7 +35,7 @@ with left_col:
     """)
 
     try:
-        img = Image.open("photo321.jpg")
+        img = Image.open("photo321.png")
         width, height = img.size
         small_img = img.resize((width // 4, height // 4))
         st.image(small_img, caption="Ο Α.Κ. στην κουζίνα, δευτερόλεπτα πριν την 23η καταγγελία.")
@@ -199,7 +199,7 @@ with chronos_right:
 # --- ΦΩΤΟΓΡΑΦΙΑ 122 ΠΑΝΩ ΑΠΟ ΨΥΧΟΛΟΓΟΥΣ (FULL WIDTH) ---
 st.markdown("---")
 try:
-        img = Image.open("photo122.jpg")
+        img = Image.open("photo122.png")
         width, height = img.size
         small_img = img.resize((width // 4, height // 4))
         st.image(small_img, caption="Ο Γ.Σ, CEO Dermatologica, λίγο πρίν τον πιάσουν στο πάρκινγκ με Α.Κ.")
@@ -282,6 +282,7 @@ with right_col:
 
 
 #streamlit run c:/Users/Owner/OneDrive/Documents/python1/.venv/portokali_satira.py
+
 
 
 
