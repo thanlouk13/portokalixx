@@ -2,6 +2,43 @@
 import streamlit as st
 from PIL import Image
 
+# ==== PASSWORD PROTECTION ====
+def check_password():
+    """Returns `True` if the user gave the correct password."""
+    def password_entered():
+        """Checks whether a password entered in the input field is correct."""
+        if st.session_state["password"] == "PAO6969":   # ← YOUR PASSWORD
+            st.session_state["password_correct"] = True
+            del st.session_state["password"]
+        else:
+            st.session_state["password_correct"] = False
+
+    if "password_correct" not in st.session_state:
+        st.text_input(
+            "🔒 Password",
+            type="password",
+            on_change=password_entered,
+            key="password",
+            placeholder="Enter password…"
+        )
+        return False
+    elif not st.session_state["password_correct"]:
+        st.text_input(
+            "🔒 Password",
+            type="password",
+            on_change=password_entered,
+            key="password",
+            placeholder="Try again"
+        )
+        st.error("😕 Wrong password")
+        return False
+    else:
+        return True
+
+if not check_password():
+    st.stop()  # Stops the app until correct password is entered
+# =========================================
+
 # Page config
 st.set_page_config(page_title="Α.Κ. ο Ακατονόμαστος", layout="wide")
 
@@ -282,6 +319,7 @@ with right_col:
 
 
 #streamlit run c:/Users/Owner/OneDrive/Documents/python1/.venv/portokali_satira.py
+
 
 
 
